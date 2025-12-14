@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <td>product name</td>
+        <td>price</td>
+        <td>description</td>
+    </tr>
+    {% for i in products %}
+    <tr>
+        <td>{{i.pname}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.description}}</td>
+        <td><a href="{% url 'update' i.id %}">edit</a></td>
+        <td><a href="{% url 'delete' i.id %}">delete</a></td>
+    </tr>
+
+    {% endfor %}
+</table>
